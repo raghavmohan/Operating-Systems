@@ -1,0 +1,184 @@
+
+**********************************************************************
+
+Test build
+build xv6 using make
+
+**********************************************************************
+Trying to clean project using make clean
+make clean
+make: *** No rule to make target `clean'.  Stop.
+test build FAILED
+Trying to build project using make
+make
+make: *** No targets specified and no makefile found.  Stop.
+make xv6.img fs.img
+make: *** No rule to make target `xv6.img'.  Stop.
+test build FAILED
+test build FAILED
+test build FAILED
+
+
+test build FAILED
+ (build xv6 using make)
+ make clean failed (error 2)
+ make failed (error 2)
+ required file 'xv6.img' does not exist after make
+ required file 'fs.img' does not exist after make
+
+
+**********************************************************************
+
+Test settickets
+compile and run a user program with a settickets call
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/settickets.c
+test settickets FAILED
+Traceback (most recent call last):
+  File "/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/2b/test.py", line 173, in run_test
+    test.run()
+  File "/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/2b/xv6.py", line 15, in run
+    shutil.copy(tester_path, self.project_path + "/user/tester.c")
+  File "/usr/lib64/python2.6/shutil.py", line 84, in copy
+    copyfile(src, dst)
+  File "/usr/lib64/python2.6/shutil.py", line 51, in copyfile
+    with open(dst, 'wb') as fdst:
+IOError: [Errno 2] No such file or directory: '/tmp/tmpwrQgqK/p/user/tester.c'
+
+
+test settickets FAILED
+ (compile and run a user program with a settickets call)
+ Unexcpected exception [Errno 2] No such file or directory: '/tmp/tmpwrQgqK/p/user/tester.c'
+
+
+**********************************************************************
+
+Test getpinfo
+compile and run a user program with a getpinfo call
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/getpinfo.c
+test getpinfo FAILED
+Traceback (most recent call last):
+  File "/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/2b/test.py", line 173, in run_test
+    test.run()
+  File "/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/2b/xv6.py", line 15, in run
+    shutil.copy(tester_path, self.project_path + "/user/tester.c")
+  File "/usr/lib64/python2.6/shutil.py", line 84, in copy
+    copyfile(src, dst)
+  File "/usr/lib64/python2.6/shutil.py", line 51, in copyfile
+    with open(dst, 'wb') as fdst:
+IOError: [Errno 2] No such file or directory: '/tmp/tmpwrQgqK/p/user/tester.c'
+
+
+test getpinfo FAILED
+ (compile and run a user program with a getpinfo call)
+ Unexcpected exception [Errno 2] No such file or directory: '/tmp/tmpwrQgqK/p/user/tester.c'
+
+
+**********************************************************************
+
+Test getpinfo2
+check that getpinfo returns some reasonable values
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/getpinfo2.c
+test getpinfo2 FAILED
+Traceback (most recent call last):
+  File "/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/2b/test.py", line 173, in run_test
+    test.run()
+  File "/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/2b/xv6.py", line 15, in run
+    shutil.copy(tester_path, self.project_path + "/user/tester.c")
+  File "/usr/lib64/python2.6/shutil.py", line 84, in copy
+    copyfile(src, dst)
+  File "/usr/lib64/python2.6/shutil.py", line 51, in copyfile
+    with open(dst, 'wb') as fdst:
+IOError: [Errno 2] No such file or directory: '/tmp/tmpwrQgqK/p/user/tester.c'
+
+
+test getpinfo2 FAILED
+ (check that getpinfo returns some reasonable values)
+ Unexcpected exception [Errno 2] No such file or directory: '/tmp/tmpwrQgqK/p/user/tester.c'
+
+
+**********************************************************************
+
+Test ticks
+check that processes are scheduled at correct ratio
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/ticks.c
+test ticks FAILED
+Traceback (most recent call last):
+  File "/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/2b/test.py", line 173, in run_test
+    test.run()
+  File "/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/2b/xv6.py", line 15, in run
+    shutil.copy(tester_path, self.project_path + "/user/tester.c")
+  File "/usr/lib64/python2.6/shutil.py", line 84, in copy
+    copyfile(src, dst)
+  File "/usr/lib64/python2.6/shutil.py", line 51, in copyfile
+    with open(dst, 'wb') as fdst:
+IOError: [Errno 2] No such file or directory: '/tmp/tmpwrQgqK/p/user/tester.c'
+
+
+test ticks FAILED
+ (check that processes are scheduled at correct ratio)
+ Unexcpected exception [Errno 2] No such file or directory: '/tmp/tmpwrQgqK/p/user/tester.c'
+
+
+**********************************************************************
+
+Test usertests
+run usertests to check for regressions
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/usertests.c
+test usertests FAILED
+Traceback (most recent call last):
+  File "/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/2b/test.py", line 173, in run_test
+    test.run()
+  File "/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/2b/xv6.py", line 15, in run
+    shutil.copy(tester_path, self.project_path + "/user/tester.c")
+  File "/usr/lib64/python2.6/shutil.py", line 84, in copy
+    copyfile(src, dst)
+  File "/usr/lib64/python2.6/shutil.py", line 51, in copyfile
+    with open(dst, 'wb') as fdst:
+IOError: [Errno 2] No such file or directory: '/tmp/tmpwrQgqK/p/user/tester.c'
+
+
+test usertests FAILED
+ (run usertests to check for regressions)
+ Unexcpected exception [Errno 2] No such file or directory: '/tmp/tmpwrQgqK/p/user/tester.c'
+
+**********************************************************************
+Summary:
+test build FAILED
+ (build xv6 using make)
+ make clean failed (error 2)
+ make failed (error 2)
+ required file 'xv6.img' does not exist after make
+ required file 'fs.img' does not exist after make
+
+test settickets FAILED
+ (compile and run a user program with a settickets call)
+ Unexcpected exception [Errno 2] No such file or directory: '/tmp/tmpwrQgqK/p/user/tester.c'
+
+test getpinfo FAILED
+ (compile and run a user program with a getpinfo call)
+ Unexcpected exception [Errno 2] No such file or directory: '/tmp/tmpwrQgqK/p/user/tester.c'
+
+test getpinfo2 FAILED
+ (check that getpinfo returns some reasonable values)
+ Unexcpected exception [Errno 2] No such file or directory: '/tmp/tmpwrQgqK/p/user/tester.c'
+
+test ticks FAILED
+ (check that processes are scheduled at correct ratio)
+ Unexcpected exception [Errno 2] No such file or directory: '/tmp/tmpwrQgqK/p/user/tester.c'
+
+test usertests FAILED
+ (run usertests to check for regressions)
+ Unexcpected exception [Errno 2] No such file or directory: '/tmp/tmpwrQgqK/p/user/tester.c'
+
+Passed 0 of 6 tests.
+Overall 0 of 6

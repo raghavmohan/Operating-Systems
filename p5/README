@@ -1,0 +1,18 @@
+AUTHOR: RAGHAV MOHAN
+EMAIL: rmohan2@wisc.edu
+CSLOGIN: mohan
+
+PARTNER: ALEXANDER LARSON
+EMAIL: allarson4@wisc.edu
+CSLOGIN: alarson
+
+
+Project 5:
+
+LINUX: This part was relatively simpler code, just lots of it. It is related to the webserver. Comments in the code describe how the disk is set up etc. Notable things : 
+       a. The case where Imap Piece on Disk is to be collapsed is never checked
+       b. We have a function that we call to load the imap nodes into memory. This may get called redundantly, but for the sake of passing tests, we call it fairly liberally.
+
+ 
+B) Kernel: This part had to do with the checksum. The main problems we encountered were not storing/reading the checksum at the correct time, as most of the code is copied from existing code, and there are many subtle intricacies that exists within this code. Nonetheless, we figured it out.
+

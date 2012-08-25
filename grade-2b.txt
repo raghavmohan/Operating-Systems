@@ -1,0 +1,10 @@
+User:    mohan
+Partner: 
+Test build 1
+Test settickets 1
+Test getpinfo 1
+Test getpinfo2 1
+Test ticks 1
+Test usertests 1
+Test graph 0.9
+Overall 6.9 of 7

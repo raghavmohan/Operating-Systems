@@ -1,0 +1,17 @@
+Name	: RAGHAV MOHAN
+ID	: 9057338981
+Class	: CS 537 Operating Systems
+Prof	: Prof. Remzi Arpaci Dusseau
+Project#: P4
+TA	: Mr. Aaron Brown
+
+
+Project 4 Description 
+
+
+-- Webserver
+   For this part all I had to do was to make the server.c multi threaded. The hardest part for this assignment was figuring out how to get the file size. The filesize rio buffer did not get reset after calling it, hence I created two methods for requestHandle. One is called as an initializer which saves all the relevant information about the request into a struct that I defined in request.h. This way, I can just pass the struct to requestHandle rather than scan through the rio buffer again. There may be a better way to do this, but to get this to work and pass tests, I implemented it this way
+
+--xv6
+
+   For this part, once the stack got set up correctly, understanding what actually was going on in xv6 when we create a new thread was easy. The hardest part was to figure out what to do in growproc in proc.c. To me, going through the whole process table was not intuitive, however, it makes sense as we need to update this in each process that shares the same address space. I do believe that there should be a cleaner way to do this - for ex in the process struct, keep track of all the threads so that we don't need to go through the whole process table every time etc. but again, this way passes all the tests which was the top priority.

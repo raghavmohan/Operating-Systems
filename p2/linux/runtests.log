@@ -1,0 +1,58 @@
+Test build PASSED
+Object files remain after 'make clean'.
+Files: mysh
+
+Test basic PASSED
+
+Test blank PASSED
+
+Test multiline PASSED
+
+Test parseargs PASSED
+
+Test parseargs2 PASSED
+
+Test exit PASSED
+
+Test pwd PASSED
+
+Test cd PASSED
+
+Test cd2 PASSED
+
+Test whitespace PASSED
+
+Test whitespace2 PASSED
+
+Test args PASSED
+
+Test args2 PASSED
+
+Test longline PASSED
+
+Test toolong PASSED
+
+Test badprog PASSED
+
+Test errout PASSED
+
+Test badcd PASSED
+
+Test badpwd PASSED
+
+Test badexit PASSED
+
+Test redirect PASSED
+
+Test redirect2 PASSED
+
+Test badredir PASSED
+
+Test badredir2 PASSED
+
+Test interactive PASSED
+
+Test fun PASSED
+
+Passed 27 of 27 tests.
+Overall 27 of 27

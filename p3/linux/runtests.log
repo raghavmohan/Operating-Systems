@@ -1,0 +1,520 @@
+
+**********************************************************************
+
+Test build
+build project using make
+
+**********************************************************************
+Trying to clean project using make clean
+make clean
+rm -rf *.o libmem.so
+Trying to build project using make
+make
+gcc -g -c -fpic -o mem.o mem.c
+mem.c: In function ‘Mem_Free’:
+mem.c:242: warning: comparison of distinct pointer types lacks a cast
+mem.c: In function ‘Mem_Dump’:
+mem.c:308: warning: cast from pointer to integer of different size
+mem.c: In function ‘printPointer’:
+mem.c:323: warning: cast from pointer to integer of different size
+gcc -g -shared -o libmem.so mem.o;\
+	LD_LIBRARY_PATH=.;\
+	export LD_LIBRARY_PATH;\
+
+
+
+test build PASSED
+ (build project using make)
+
+
+**********************************************************************
+
+Test init
+call Mem_Init with size = 1 page
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/tests/init
+
+
+test init PASSED
+ (call Mem_Init with size = 1 page)
+
+
+**********************************************************************
+
+Test init2
+init that should be rounded up to 1 page
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/tests/init2
+
+
+test init2 PASSED
+ (init that should be rounded up to 1 page)
+
+
+**********************************************************************
+
+Test alloc
+a simple 8 byte allocation
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/tests/alloc
+
+
+test alloc PASSED
+ (a simple 8 byte allocation)
+
+
+**********************************************************************
+
+Test writeable
+write to a chunk from Mem_Alloc
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/tests/writeable
+
+
+test writeable PASSED
+ (write to a chunk from Mem_Alloc)
+
+
+**********************************************************************
+
+Test free
+a simple allocation followed by a free
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/tests/free
+
+
+test free PASSED
+ (a simple allocation followed by a free)
+
+
+**********************************************************************
+
+Test align
+check first pointer returned is 8-byte aligned
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/tests/align
+
+
+test align PASSED
+ (check first pointer returned is 8-byte aligned)
+
+
+**********************************************************************
+
+Test alloc2
+a few aligned allocations
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/tests/alloc2
+
+
+test alloc2 PASSED
+ (a few aligned allocations)
+
+
+**********************************************************************
+
+Test alloc3
+many odd sized allocations
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/tests/alloc3
+
+
+test alloc3 PASSED
+ (many odd sized allocations)
+
+
+**********************************************************************
+
+Test free2
+a few aligned allocations and frees
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/tests/free2
+
+
+test free2 PASSED
+ (a few aligned allocations and frees)
+
+
+**********************************************************************
+
+Test free3
+many odd sized allocations and interspersed frees
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/tests/free3
+
+
+test free3 PASSED
+ (many odd sized allocations and interspersed frees)
+
+
+**********************************************************************
+
+Test align2
+a few allocations checked for alignment
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/tests/align2
+
+
+test align2 PASSED
+ (a few allocations checked for alignment)
+
+
+**********************************************************************
+
+Test align3
+many odd sized allocations checked for alignment
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/tests/align3
+
+
+test align3 PASSED
+ (many odd sized allocations checked for alignment)
+
+
+**********************************************************************
+
+Test nospace
+second allocation is too big to fit
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/tests/nospace
+
+
+test nospace PASSED
+ (second allocation is too big to fit)
+
+
+**********************************************************************
+
+Test badinit
+bad arguments to Mem_Init
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/tests/badinit
+
+
+test badinit PASSED
+ (bad arguments to Mem_Init)
+
+
+**********************************************************************
+
+Test badinit2
+bad arguments to Mem_Init
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/tests/badinit2
+
+
+test badinit2 PASSED
+ (bad arguments to Mem_Init)
+
+
+**********************************************************************
+
+Test doubleinit
+call init twice
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/tests/doubleinit
+
+
+test doubleinit PASSED
+ (call init twice)
+
+
+**********************************************************************
+
+Test bestfit
+use first free space for allocation
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/tests/bestfit
+
+
+test bestfit PASSED
+ (use first free space for allocation)
+
+
+**********************************************************************
+
+Test bestfit2
+use first free space for allocation
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/tests/bestfit2
+
+
+test bestfit2 PASSED
+ (use first free space for allocation)
+
+
+**********************************************************************
+
+Test coalesce
+check for coalesce free space
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/tests/coalesce
+
+
+test coalesce PASSED
+ (check for coalesce free space)
+
+
+**********************************************************************
+
+Test coalesce2
+check for coalesce free space
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/tests/coalesce2
+
+
+test coalesce2 PASSED
+ (check for coalesce free space)
+
+
+**********************************************************************
+
+Test coalesce3
+check for coalesce free space
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/tests/coalesce3
+
+
+test coalesce3 PASSED
+ (check for coalesce free space)
+
+
+**********************************************************************
+
+Test coalesce4
+check for coalesce free space
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/tests/coalesce4
+
+
+test coalesce4 PASSED
+ (check for coalesce free space)
+
+
+**********************************************************************
+
+Test coalesce5
+check for coalesce free space (first chunk)
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/tests/coalesce5
+
+
+test coalesce5 PASSED
+ (check for coalesce free space (first chunk))
+
+
+**********************************************************************
+
+Test coalesce6
+check for coalesce free space (last chunk)
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/tests/coalesce6
+
+
+test coalesce6 PASSED
+ (check for coalesce free space (last chunk))
+
+
+**********************************************************************
+
+Test random
+psuedo-random sequence of allocs and frees
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/random 0 10 0
+time: 0.0017991065979
+
+
+test random PASSED
+ (psuedo-random sequence of allocs and frees)
+
+
+**********************************************************************
+
+Test random2
+psuedo-random sequence of allocs and frees
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/random 0 1000 1
+time: 0.00280809402466
+
+
+test random2 PASSED
+ (psuedo-random sequence of allocs and frees)
+
+
+**********************************************************************
+
+Test random3
+psuedo-random sequence of allocs and frees
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/random 0 100000 1
+time: 0.380206108093
+
+
+test random3 PASSED
+ (psuedo-random sequence of allocs and frees)
+
+
+**********************************************************************
+
+Test random4
+psuedo-random sequence of allocs and frees
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/random 1 500000 1
+time: 2.51538300514
+
+
+test random4 PASSED
+ (psuedo-random sequence of allocs and frees)
+
+
+**********************************************************************
+
+Test random5
+psuedo-random sequence of allocs and frees
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/random 1 20000000 0
+time: 131.072654963
+
+
+test random5 PASSED
+ (psuedo-random sequence of allocs and frees)
+
+
+**********************************************************************
+
+Test prohibit
+check for prohibited library functions
+
+**********************************************************************
+objdump --dynamic-syms libmem.so
+
+
+test prohibit PASSED
+ (check for prohibited library functions)
+
+**********************************************************************
+Summary:
+test build PASSED
+ (build project using make)
+
+test init PASSED
+ (call Mem_Init with size = 1 page)
+
+test init2 PASSED
+ (init that should be rounded up to 1 page)
+
+test alloc PASSED
+ (a simple 8 byte allocation)
+
+test writeable PASSED
+ (write to a chunk from Mem_Alloc)
+
+test free PASSED
+ (a simple allocation followed by a free)
+
+test align PASSED
+ (check first pointer returned is 8-byte aligned)
+
+test alloc2 PASSED
+ (a few aligned allocations)
+
+test alloc3 PASSED
+ (many odd sized allocations)
+
+test free2 PASSED
+ (a few aligned allocations and frees)
+
+test free3 PASSED
+ (many odd sized allocations and interspersed frees)
+
+test align2 PASSED
+ (a few allocations checked for alignment)
+
+test align3 PASSED
+ (many odd sized allocations checked for alignment)
+
+test nospace PASSED
+ (second allocation is too big to fit)
+
+test badinit PASSED
+ (bad arguments to Mem_Init)
+
+test badinit2 PASSED
+ (bad arguments to Mem_Init)
+
+test doubleinit PASSED
+ (call init twice)
+
+test bestfit PASSED
+ (use first free space for allocation)
+
+test bestfit2 PASSED
+ (use first free space for allocation)
+
+test coalesce PASSED
+ (check for coalesce free space)
+
+test coalesce2 PASSED
+ (check for coalesce free space)
+
+test coalesce3 PASSED
+ (check for coalesce free space)
+
+test coalesce4 PASSED
+ (check for coalesce free space)
+
+test coalesce5 PASSED
+ (check for coalesce free space (first chunk))
+
+test coalesce6 PASSED
+ (check for coalesce free space (last chunk))
+
+test random PASSED
+ (psuedo-random sequence of allocs and frees)
+
+test random2 PASSED
+ (psuedo-random sequence of allocs and frees)
+
+test random3 PASSED
+ (psuedo-random sequence of allocs and frees)
+
+test random4 PASSED
+ (psuedo-random sequence of allocs and frees)
+
+test random5 PASSED
+ (psuedo-random sequence of allocs and frees)
+
+test prohibit PASSED
+ (check for prohibited library functions)
+
+Passed 31 of 31 tests.
+Overall 31 of 31
