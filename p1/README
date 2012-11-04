@@ -2,11 +2,6 @@ AUTHOR: RAGHAV MOHAN
 EMAIL: rmohan2@wisc.edu
 CSLOGIN: mohan
 
-PARTNER: ALEXIS GREENSTREET
-EMAIL: greenstreet@wisc.edu
-CSLOGIN: alexis
-
-
 Project 1:
 
 A) Sorting: For this assignment, the hardest part was getting back in touch with C. It was a good refresher on the commands, I/O, etc. I also ran into problems with big files, however as Professor Remzi stated, I was not calling malloc correctly, and thus my program was crashing because it was trying to store all the records on the stack rather than on the heap. Once I did that, it worked correctly. I did not try to optimize the sorting, however using a two pass sort would have been my approach.
